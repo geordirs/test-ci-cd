@@ -35,4 +35,5 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.WEBHOOK_ID }}
         uses: Ilshidur/action-discord@0.3.2
         with:
-          args: 'Imagen creada correctamente'
+          when: on_failure
+          args: 'ERROR: Imagen no creada'
