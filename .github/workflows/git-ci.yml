@@ -31,7 +31,7 @@ jobs:
               docker build . --file Dockerfile --tag server:$(date +%s)
               if [ $? eq 0 ]
               then 
-                echo "OK" 
+                echo "OooooooooooooooooooooooooooooooooooooK" 
               else  
                 echo "FAIL"
               fi
