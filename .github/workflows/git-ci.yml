@@ -37,11 +37,10 @@ jobs:
               fi
 
       # Runs a set of commands using the runners shell
-      success_notification:
       - name: Discord Message
         env:
           DISCORD_WEBHOOK: ${{ secrets.WEBHOOK_ID }}
         uses: Ilshidur/action-discord@0.3.2
         with:
           args: 'Error Imagen no creada '
-        when: on_failure
+          when: on_failure
