@@ -29,11 +29,11 @@ jobs:
       - name: Build the Docker Image
         run: |
               docker build . --file Dockerfile --tag server:$(date +%s)
-              if [ $? eq 0 ]
+              if [ $? -eq 0 ]
               then 
-                echo "OooooooooooooooooooooooooooooooooooooK" 
+                echo "Ok Giorgio" 
               else  
-                echo "FAILeddddddddddddddddddddddddddddddddddddd"
+                echo "FAIL Giorgio"
               fi
 
       # Runs a set of commands using the runners shell
