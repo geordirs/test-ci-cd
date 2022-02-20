@@ -44,4 +44,4 @@ jobs:
         uses: Ilshidur/action-discord@0.3.2
         with:
           args: 'Error Imagen no creada '
-          when: on_failure
+        when: on_failure
