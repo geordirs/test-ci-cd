@@ -28,7 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build the Docker Image
         run: |
-              docker build . --file Dockerfile --tag server:$(date +%s) || { echo 'my_command failed' ; exit 1; }
+              docker build . --file Dockerfile --tag server:$(date +%s)]
+              if [ $? -eq 0 ]
+              then 
+                echo "OK" 
+              else  
+                echo "FAIL"
+              fi
 
       # Runs a set of commands using the runners shell
       - name: Discord Message
