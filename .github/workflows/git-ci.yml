@@ -33,7 +33,7 @@ jobs:
               then 
                 echo "OooooooooooooooooooooooooooooooooooooK" 
               else  
-                echo "FAIL"
+                echo "FAILeddddddddddddddddddddddddddddddddddddd"
               fi
 
       # Runs a set of commands using the runners shell
