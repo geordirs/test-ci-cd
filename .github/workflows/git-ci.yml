@@ -34,7 +34,7 @@ jobs:
                 echo "Ok Giorgio" 
               else  
                 echo "FAIL Giorgio"
-              f
+              fi
 
       # Runs a set of commands using the runners shell
       - name: Discord Message
@@ -44,4 +44,5 @@ jobs:
         if: ${{ failure() }}
         with:
           args: 'Error Imagen no creada '
+      
         
