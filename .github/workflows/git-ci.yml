@@ -27,10 +27,13 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build the Docker Image
-        run: if [docker build . --file Dockerfile --tag server:$(date +%s)]
-                then echo "OK" 
-             else  echo "FAIL"
-             fi
+        run: |
+              if [docker build . --file Dockerfile --tag server:$(date +%s)]
+              then 
+                echo "OK" 
+              else  
+                echo "FAIL"
+              fi
 
       # Runs a set of commands using the runners shell
       - name: Discord Message
