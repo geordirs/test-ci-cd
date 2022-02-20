@@ -31,15 +31,18 @@ jobs:
               docker build . --file Dockerfile --tag server:$(date +%s)
               if [ $? -eq 0 ]
               then 
-                echo "Ok Giorgio" 
+                env:
+                  DISCORD_WEBHOOK: ${{ secrets.WEBHOOK_ID }}
+                uses: Ilshidur/action-discord@0.3.2
+                with:
+                  args: 'Imagen creada correctamente'
               else  
-                echo "FAIL Giorgio"
+                env:
+                  DISCORD_WEBHOOK: ${{ secrets.WEBHOOK_ID }}
+                uses: Ilshidur/action-discord@0.3.2
+                with:
+                  args: 'ERROR Imagen no creada'
               fi
 
       # Runs a set of commands using the runners shell
-      - name: Discord Message
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.WEBHOOK_ID }}
-        uses: Ilshidur/action-discord@0.3.2
-        with:
-          args: 'Imagen creada correctamente'
+
