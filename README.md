@@ -1,6 +1,6 @@
 # Test-CI-CD
 CI CD with react and discord messages
-
+# Add 
 # Encrypt/Decrypt fields with SOPS
 
 Here we have a yaml file with sensitive keys in clear text: <mark>password</mark>
@@ -89,6 +89,21 @@ username: geordirs.example
 password: GiorgioExample3
 description: test example
 ```
+
+6. Substituting in the GPG key ID you'd like to use
+
+```
+$ gpg --armor --export GPG_key_ID
+```
+Prints the GPG key ID, in ASCII armor format
+7. And copy  your GPG key beginning with <mark>BEGIN PGP PUBLIC KEY BLOCK</mark> and ending with
+   <mark>END PGP PUBLIC KEY BLOCK<mark>
+
+## Adding a GPG key
+Your account > Settings > Access / :key:**SSH and GPG keys** > **New GPG key**
+
+Paste the GPG key you copied when you **generated your GPG key**
+
 
 # Getting Started with Create React App
 
